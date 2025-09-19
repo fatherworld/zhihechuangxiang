@@ -536,6 +536,48 @@ function openMap() {
     window.open(mapUrls[0], '_blank');
 }
 
+// Logo 切换功能
+function switchLogo(logoSrc, buttonElement) {
+    const heroLogo = document.getElementById('hero-logo');
+    const buttons = document.querySelectorAll('.logo-btn');
+    
+    // 更新 logo 图片
+    heroLogo.src = logoSrc;
+    
+    // 添加切换动画效果
+    heroLogo.style.opacity = '0';
+    heroLogo.style.transform = 'scale(0.9)';
+    
+    setTimeout(() => {
+        heroLogo.style.opacity = '1';
+        heroLogo.style.transform = 'scale(1)';
+    }, 150);
+    
+    // 更新按钮状态
+    buttons.forEach(btn => btn.classList.remove('active'));
+    buttonElement.classList.add('active');
+    
+    // 添加触感反馈（移动端）
+    if (navigator.vibrate && isMobile()) {
+        navigator.vibrate(30);
+    }
+}
+
+// Logo 自动轮播功能（可选）
+function startLogoCarousel() {
+    const logos = ['logo.svg', 'logo-with-text.svg', 'logo-simple.svg'];
+    const buttons = document.querySelectorAll('.logo-btn');
+    let currentIndex = 0;
+    
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % logos.length;
+        switchLogo(logos[currentIndex], buttons[currentIndex]);
+    }, 5000); // 每5秒切换一次
+}
+
+// 如果需要自动轮播，取消下面的注释
+// startLogoCarousel();
+
 // 图片懒加载（如果后续添加图片）
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {

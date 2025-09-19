@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00BCD4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 发光效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景圆环 -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="url(#techGradient)" stroke-width="8" opacity="0.3"/>
+  
+  <!-- 核心芯片设计 -->
+  <g transform="translate(100,100)">
+    <!-- 中央核心 -->
+    <rect x="-25" y="-25" width="50" height="50" rx="8" fill="url(#techGradient)" filter="url(#glow)"/>
+    
+    <!-- 内部电路纹理 -->
+    <g stroke="#ffffff" stroke-width="2" opacity="0.8">
+      <line x1="-15" y1="-10" x2="15" y2="-10"/>
+      <line x1="-15" y1="0" x2="15" y2="0"/>
+      <line x1="-15" y1="10" x2="15" y2="10"/>
+      <line x1="-10" y1="-15" x2="-10" y2="15"/>
+      <line x1="0" y1="-15" x2="0" y2="15"/>
+      <line x1="10" y1="-15" x2="10" y2="15"/>
+    </g>
+    
+    <!-- 四个角的连接器 -->
+    <g fill="url(#techGradient)">
+      <!-- 左上 -->
+      <rect x="-45" y="-45" width="15" height="15" rx="3"/>
+      <rect x="-42" y="-25" width="9" height="15" rx="2"/>
+      <rect x="-25" y="-42" width="15" height="9" rx="2"/>
+      
+      <!-- 右上 -->
+      <rect x="30" y="-45" width="15" height="15" rx="3"/>
+      <rect x="33" y="-25" width="9" height="15" rx="2"/>
+      <rect x="10" y="-42" width="15" height="9" rx="2"/>
+      
+      <!-- 左下 -->
+      <rect x="-45" y="30" width="15" height="15" rx="3"/>
+      <rect x="-42" y="10" width="9" height="15" rx="2"/>
+      <rect x="-25" y="33" width="15" height="9" rx="2"/>
+      
+      <!-- 右下 -->
+      <rect x="30" y="30" width="15" height="15" rx="3"/>
+      <rect x="33" y="10" width="9" height="15" rx="2"/>
+      <rect x="10" y="33" width="15" height="9" rx="2"/>
+    </g>
+    
+    <!-- 数据流动效果 -->
+    <g stroke="url(#techGradient)" stroke-width="2" fill="none" opacity="0.6">
+      <circle cx="-60" cy="0" r="4">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="60" cy="0" r="4">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="-60" r="4">
+        <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="60" r="4">
+        <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- 外围装饰环 -->
+  <g transform="translate(100,100)" stroke="url(#techGradient)" stroke-width="1" fill="none" opacity="0.5">
+    <circle r="65" stroke-dasharray="5,5">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="75" stroke-dasharray="8,3">
+      <animateTransform attributeName="transform" type="rotate" values="360;0" dur="15s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

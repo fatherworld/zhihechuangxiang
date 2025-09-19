@@ -37,8 +37,36 @@ body {
     padding: 1rem 20px;
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.logo-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.logo-full {
+    height: 40px;
+    width: auto;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.logo-full:hover {
+    transform: scale(1.05);
+}
+
 .nav-brand h2 {
     color: #2c3e50;
+    margin: 0;
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -194,6 +222,69 @@ body {
     color: #667eea;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo 展示区域 */
+.hero-logo-showcase {
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: fadeInUp 1s ease;
+}
+
+.logo-display {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: inline-block;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.hero-logo-main {
+    height: 120px;
+    width: auto;
+    max-width: 300px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.hero-logo-main:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+.logo-selector {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+}
+
+.logo-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo-btn.active {
+    background: rgba(255, 255, 255, 0.9);
+    color: #667eea;
+    border-color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
 }
 
 /* 动画 */
@@ -843,9 +934,38 @@ section {
     .nav-brand h2 {
         font-size: 1.3rem;
     }
-    
+
     .navbar .container {
         padding: 0.8rem 10px;
+    }
+    
+    .logo-full {
+        height: 32px;
+        max-width: 150px;
+    }
+    
+    /* Logo展示区域移动端优化 */
+    .hero-logo-showcase {
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-logo-main {
+        height: 80px;
+        max-width: 250px;
+    }
+    
+    .logo-display {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .logo-selector {
+        gap: 0.3rem;
+    }
+    
+    .logo-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
     }
     
     /* 按钮优化 */

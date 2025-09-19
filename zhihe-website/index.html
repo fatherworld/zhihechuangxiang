@@ -10,6 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>深圳智核创享科技有限公司 - 专业科技服务提供商</title>
+    <link rel="icon" type="image/svg+xml" href="logo-simple.svg">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -18,7 +19,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h2>智核创享科技</h2>
+                <img src="logo-with-text.svg" alt="智核创享科技" class="logo-full">
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">首页</a>
@@ -39,6 +40,18 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
+                <!-- Logo 展示区域 -->
+                <div class="hero-logo-showcase">
+                    <div class="logo-display">
+                        <img src="logo.svg" alt="智核创享科技完整版Logo" class="hero-logo-main" id="hero-logo">
+                    </div>
+                    <div class="logo-selector">
+                        <button class="logo-btn active" onclick="switchLogo('logo.svg', this)">完整版</button>
+                        <button class="logo-btn" onclick="switchLogo('logo-with-text.svg', this)">带文字</button>
+                        <button class="logo-btn" onclick="switchLogo('logo-simple.svg', this)">简洁版</button>
+                    </div>
+                </div>
+                
                 <h1 class="hero-title">深圳智核创享科技有限公司</h1>
                 <p class="hero-subtitle">专业的软件开发与技术服务提供商</p>
                 <p class="hero-description">致力于为客户提供优质的软件开发、云平台业务外包、智能控制系统集成等综合技术服务</p>

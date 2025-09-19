@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150" width="400" height="150">
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00BCD4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00BCD4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo图标部分 -->
+  <g transform="translate(75,75)">
+    <!-- 外围圆环 -->
+    <circle cx="0" cy="0" r="45" fill="none" stroke="url(#techGradient)" stroke-width="3" opacity="0.3"/>
+    
+    <!-- 核心芯片 -->
+    <rect x="-15" y="-15" width="30" height="30" rx="5" fill="url(#techGradient)"/>
+    
+    <!-- 内部电路 -->
+    <g stroke="#ffffff" stroke-width="1.5" opacity="0.9">
+      <line x1="-10" y1="-6" x2="10" y2="-6"/>
+      <line x1="-10" y1="0" x2="10" y2="0"/>
+      <line x1="-10" y1="6" x2="10" y2="6"/>
+      <line x1="-6" y1="-10" x2="-6" y2="10"/>
+      <line x1="0" y1="-10" x2="0" y2="10"/>
+      <line x1="6" y1="-10" x2="6" y2="10"/>
+    </g>
+    
+    <!-- 四个角的连接点 -->
+    <g fill="url(#techGradient)">
+      <rect x="-30" y="-30" width="8" height="8" rx="2"/>
+      <rect x="22" y="-30" width="8" height="8" rx="2"/>
+      <rect x="-30" y="22" width="8" height="8" rx="2"/>
+      <rect x="22" y="22" width="8" height="8" rx="2"/>
+    </g>
+    
+    <!-- 连接线 -->
+    <g stroke="url(#techGradient)" stroke-width="2" opacity="0.6">
+      <line x1="-26" y1="-26" x2="-15" y2="-15"/>
+      <line x1="26" y1="-26" x2="15" y2="-15"/>
+      <line x1="-26" y1="26" x2="-15" y2="15"/>
+      <line x1="26" y1="26" x2="15" y2="15"/>
+    </g>
+    
+    <!-- 旋转装饰环 -->
+    <circle r="35" stroke="url(#techGradient)" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="3,3">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="10s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- 公司名称 -->
+  <g transform="translate(160,75)">
+    <!-- 智核创享 -->
+    <text x="0" y="-15" font-family="'Microsoft YaHei', sans-serif" font-size="32" font-weight="bold" fill="url(#textGradient)">
+      智核创享
+    </text>
+    
+    <!-- 英文副标题 -->
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="14" font-weight="normal" fill="#666666" opacity="0.8">
+      ZHIHE TECHNOLOGY
+    </text>
+    
+    <!-- 科技标语 -->
+    <text x="0" y="30" font-family="'Microsoft YaHei', sans-serif" font-size="12" font-weight="normal" fill="#888888">
+      创新科技 · 智享未来
+    </text>
+  </g>
+  
+  <!-- 装饰性技术元素 -->
+  <g opacity="0.2">
+    <!-- 数据点 -->
+    <circle cx="350" cy="30" r="2" fill="url(#techGradient)">
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="370" cy="45" r="1.5" fill="url(#techGradient)">
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="360" cy="120" r="2.5" fill="url(#techGradient)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- 连接线 -->
+    <line x1="350" y1="30" x2="370" y2="45" stroke="url(#techGradient)" stroke-width="1"/>
+    <line x1="370" y1="45" x2="360" y2="120" stroke="url(#techGradient)" stroke-width="1"/>
+  </g>
+</svg>
