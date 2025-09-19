@@ -20,6 +20,7 @@
                 <a href="#home" class="nav-link">首页</a>
                 <a href="#about" class="nav-link">关于我们</a>
                 <a href="#services" class="nav-link">服务项目</a>
+                <a href="#advantages" class="nav-link">核心优势</a>
                 <a href="#contact" class="nav-link">联系我们</a>
             </div>
             <div class="hamburger" id="hamburger">
@@ -59,24 +60,24 @@
                 <div class="about-info">
                     <div class="info-card">
                         <div class="info-icon">
-                            <i class="fas fa-building"></i>
+                            <i class="fas fa-rocket"></i>
                         </div>
-                        <h3>公司概况</h3>
-                        <p>深圳智核创享科技有限公司成立于2025年09月09日，注册资本10万元，是一家专业的科技服务企业。</p>
+                        <h3>创新驱动</h3>
+                        <p>以创新为核心动力，专注于前沿技术研发，为客户提供具有竞争优势的解决方案，助力企业数字化转型升级。</p>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-users"></i>
                         </div>
-                        <h3>公司地址</h3>
-                        <p>深圳市龙岗区布吉街道龙岭社区吉华路215号301</p>
+                        <h3>专业团队</h3>
+                        <p>汇聚业界精英技术人才，拥有丰富的项目经验和深厚的技术积累，为客户提供高质量的技术服务。</p>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">
-                            <i class="fas fa-certificate"></i>
+                            <i class="fas fa-handshake"></i>
                         </div>
-                        <h3>资质信息</h3>
-                        <p>统一社会信用代码：91440300MAEUYWCF17<br>法定代表人：叶山<br>经营状态：存续</p>
+                        <h3>贴心服务</h3>
+                        <p>7x24小时技术支持，从需求分析到项目交付，全程跟踪服务，确保客户项目成功落地。</p>
                     </div>
                 </div>
             </div>
@@ -91,61 +92,125 @@
                 <p>为客户提供全方位的技术解决方案</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" onclick="openServiceDetail('software')">
                     <div class="service-icon">
                         <i class="fas fa-code"></i>
                     </div>
                     <h3>软件开发</h3>
                     <p>提供定制化软件开发服务，包括Web应用、移动应用、桌面软件等全栈开发解决方案。</p>
+                    <div class="service-link">
+                        <i class="fas fa-arrow-right"></i> 了解详情
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="openServiceDetail('cloud')">
                     <div class="service-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h3>云平台业务外包</h3>
                     <p>基于云平台的业务外包服务，帮助企业实现数字化转型，提高运营效率。</p>
+                    <div class="service-link">
+                        <i class="fas fa-arrow-right"></i> 了解详情
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="openServiceDetail('network')">
                     <div class="service-icon">
                         <i class="fas fa-network-wired"></i>
                     </div>
                     <h3>通信网络设备</h3>
                     <p>通信设备制造与网络设备制造，为企业提供专业的网络基础设施解决方案。</p>
+                    <div class="service-link">
+                        <i class="fas fa-arrow-right"></i> 了解详情
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="openServiceDetail('data')">
                     <div class="service-icon">
                         <i class="fas fa-database"></i>
                     </div>
                     <h3>数据处理存储</h3>
                     <p>数据处理和存储支持服务，确保企业数据安全可靠，高效管理。</p>
+                    <div class="service-link">
+                        <i class="fas fa-arrow-right"></i> 了解详情
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="openServiceDetail('smart')">
                     <div class="service-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
                     <h3>智能控制系统</h3>
                     <p>智能控制系统集成服务，为工业自动化提供先进的技术解决方案。</p>
+                    <div class="service-link">
+                        <i class="fas fa-arrow-right"></i> 了解详情
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="openServiceDetail('game')">
                     <div class="service-icon">
                         <i class="fas fa-gamepad"></i>
                     </div>
                     <h3>动漫游戏开发</h3>
                     <p>专业的动漫游戏开发服务，创造富有创意和吸引力的数字娱乐产品。</p>
+                    <div class="service-link">
+                        <i class="fas fa-arrow-right"></i> 了解详情
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="openServiceDetail('consulting')">
                     <div class="service-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3>技术咨询服务</h3>
                     <p>技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广等全方位技术支持。</p>
+                    <div class="service-link">
+                        <i class="fas fa-arrow-right"></i> 了解详情
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="openServiceDetail('business')">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>商务代理服务</h3>
                     <p>商务代理代办服务、市场营销策划、销售代理等综合商务解决方案。</p>
+                    <div class="service-link">
+                        <i class="fas fa-arrow-right"></i> 了解详情
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section id="advantages" class="advantages">
+        <div class="container">
+            <div class="section-header">
+                <h2>核心优势</h2>
+                <p>为什么选择深圳智核创享科技</p>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-number">01</div>
+                    <div class="advantage-content">
+                        <h3>快速响应</h3>
+                        <p>24小时内响应客户需求，快速启动项目，确保时效性</p>
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number">02</div>
+                    <div class="advantage-content">
+                        <h3>成本优化</h3>
+                        <p>灵活的定价策略，为客户提供最具性价比的解决方案</p>
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number">03</div>
+                    <div class="advantage-content">
+                        <h3>技术领先</h3>
+                        <p>掌握前沿技术，持续技术创新，保持行业领先地位</p>
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number">04</div>
+                    <div class="advantage-content">
+                        <h3>质量保证</h3>
+                        <p>严格的质量管控体系，确保每个项目都达到客户期望</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,12 +225,15 @@
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-card">
+                    <div class="contact-card" onclick="openMap()">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h3>公司地址</h3>
                         <p>深圳市龙岗区布吉街道龙岭社区吉华路215号301</p>
+                        <div class="map-link">
+                            <i class="fas fa-map"></i> 点击查看地图
+                        </div>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon">
@@ -184,38 +252,49 @@
                         <a href="tel:13693288380" class="contact-btn">立即拨打</a>
                     </div>
                 </div>
-                <div class="company-info">
-                    <h3>工商信息</h3>
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="label">公司名称：</span>
-                            <span class="value">深圳智核创享科技有限公司</span>
+                <div class="company-motto">
+                    <div class="motto-card">
+                        <div class="motto-icon">
+                            <i class="fas fa-lightbulb"></i>
                         </div>
-                        <div class="info-item">
-                            <span class="label">法定代表人：</span>
-                            <span class="value">叶山</span>
+                        <h3>公司理念</h3>
+                        <blockquote>
+                            "以科技创新为核心，以客户需求为导向，致力于成为最受信赖的技术服务伙伴。"
+                        </blockquote>
+                    </div>
+                    <div class="motto-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">项目经验</div>
                         </div>
-                        <div class="info-item">
-                            <span class="label">注册资本：</span>
-                            <span class="value">10万元</span>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">合作客户</div>
                         </div>
-                        <div class="info-item">
-                            <span class="label">成立日期：</span>
-                            <span class="value">2025-09-09</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">经营状态：</span>
-                            <span class="value">存续</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">统一社会信用代码：</span>
-                            <span class="value">91440300MAEUYWCF17</span>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">技术支持</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- 服务详情弹窗 -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">服务详情</h2>
+                <span class="close" onclick="closeServiceDetail()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent">
+                    <!-- 动态内容将在这里插入 -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 页脚 -->
     <footer class="footer">
