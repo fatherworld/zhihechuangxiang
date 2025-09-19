@@ -664,23 +664,48 @@ section {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
+        z-index: 1500;
     }
     
     .nav-menu.active {
         left: 0;
     }
     
+    .nav-link {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid #f0f0f0;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+    
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.3;
     }
     
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
     
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 200px;
+        text-align: center;
     }
     
     .contact-content {
@@ -692,26 +717,205 @@ section {
         font-size: 2rem;
     }
     
+    .section-header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
     .container {
         padding: 0 15px;
     }
     
     section {
-        padding: 60px 0;
+        padding: 50px 0;
+    }
+    
+    /* 核心优势移动端优化 */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .advantage-item {
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .advantage-number {
+        font-size: 2rem;
+        min-width: auto;
+    }
+    
+    /* 联系我们移动端优化 */
+    .contact-info {
+        gap: 1rem;
+    }
+    
+    .contact-card {
+        padding: 1.5rem;
+    }
+    
+    .company-motto {
+        padding: 1.5rem;
+    }
+    
+    .motto-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* 服务详情弹窗移动端优化 */
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        max-height: 85vh;
+    }
+    
+    .modal-header {
+        padding: 1.5rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .service-features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .feature-item {
+        padding: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
     }
     
     .services-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .about-info {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .info-card {
+        padding: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    /* 导航优化 */
+    .nav-brand h2 {
+        font-size: 1.3rem;
+    }
+    
+    .navbar .container {
+        padding: 0.8rem 10px;
+    }
+    
+    /* 按钮优化 */
+    .btn {
+        width: 180px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* 联系卡片优化 */
+    .contact-card {
+        padding: 1rem;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+    /* 弹窗进一步优化 */
+    .modal-content {
+        margin: 5% auto;
+        width: 98%;
+        max-height: 90vh;
+        border-radius: 15px;
+    }
+    
+    .modal-header {
+        padding: 1rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+    
+    .close {
+        font-size: 1.5rem;
+    }
+    
+    /* 服务详情优化 */
+    .service-detail h3 {
+        font-size: 1.1rem;
+        margin: 1rem 0 0.8rem 0;
+    }
+    
+    .service-detail li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .feature-icon {
+        font-size: 1.5rem;
+    }
+    
+    .feature-title {
+        font-size: 0.9rem;
+    }
+    
+    .feature-desc {
+        font-size: 0.8rem;
+    }
+    
+    /* 统计数据优化 */
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
     }
 }
 
@@ -853,7 +1057,111 @@ section {
     color: #7f8c8d;
 }
 
+/* 移动端触摸优化 */
+@media (max-width: 768px) {
+    /* 提升触摸目标大小 */
+    .service-card {
+        min-height: 120px;
+        touch-action: manipulation;
+    }
+    
+    .contact-card {
+        min-height: 100px;
+        touch-action: manipulation;
+    }
+    
+    .btn {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+    
+    .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+    }
+    
+    /* 防止意外缩放 */
+    input, textarea, select {
+        font-size: 16px;
+    }
+    
+    /* 改善滚动性能 */
+    .modal-body {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* 优化点击反馈 */
+    .service-card:active,
+    .contact-card:active,
+    .btn:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+}
+
+/* 超小屏幕专用优化 */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .advantage-number {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        width: 160px;
+        padding: 8px 16px;
+    }
+    
+    .modal-content {
+        width: 100%;
+        margin: 0;
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    .modal-header {
+        padding: 1rem;
+        border-radius: 0;
+    }
+}
+
+/* 横屏手机优化 */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 70vh;
+        padding: 2rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 30px 0;
+    }
+    
+    .modal-content {
+        max-height: 95vh;
+        margin: 2% auto;
+    }
+}
+
 /* 平滑滚动 */
 html {
     scroll-behavior: smooth;
+}
+
+/* 禁用iOS Safari的bounce效果 */
+body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
 }

@@ -2,9 +2,18 @@
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
-hamburger.addEventListener('click', () => {
+// 汉堡菜单点击事件
+hamburger.addEventListener('click', (e) => {
+    e.preventDefault();
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    
+    // 阻止页面滚动（当菜单打开时）
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
 });
 
 // 点击导航链接时关闭移动端菜单
@@ -12,7 +21,19 @@ document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
     });
+});
+
+// 点击菜单外部关闭菜单
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        if (navMenu.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
 });
 
 // 滚动时导航栏效果
@@ -439,6 +460,56 @@ function closeServiceDetail() {
     const modal = document.getElementById('serviceModal');
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
+}
+
+// 移动端专用优化
+function isMobile() {
+    return window.innerWidth <= 768;
+}
+
+// 添加触摸滑动关闭弹窗功能（移动端）
+let touchStartY = 0;
+let touchEndY = 0;
+
+document.addEventListener('touchstart', function(e) {
+    if (e.target.closest('.modal-content')) {
+        touchStartY = e.changedTouches[0].screenY;
+    }
+});
+
+document.addEventListener('touchend', function(e) {
+    if (e.target.closest('.modal-content')) {
+        touchEndY = e.changedTouches[0].screenY;
+        // 向下滑动超过100px关闭弹窗
+        if (touchStartY - touchEndY < -100) {
+            closeServiceDetail();
+        }
+    }
+});
+
+// 优化移动端服务卡片点击
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('touchstart', function() {
+        this.style.transform = 'scale(0.98)';
+    });
+    
+    card.addEventListener('touchend', function() {
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 150);
+    });
+});
+
+// 移动端电话号码点击优化
+if (isMobile()) {
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // 添加触感反馈（如果支持）
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+        });
+    });
 }
 
 // 点击模态框外部关闭
