@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>劳务派遣协议</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", "SimSun", serif;
+            line-height: 1.6;
+            margin: 40px;
+            background: white;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .contract-info {
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .article {
+            margin-bottom: 15px;
+            text-indent: 2em;
+        }
+        .signature-area {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            page-break-inside: avoid;
+        }
+        .signature-block {
+            width: 45%;
+            text-align: center;
+        }
+        .signature-line {
+            border-bottom: 1px solid #000;
+            margin: 20px 0;
+            height: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+        .blank-line {
+            border: none;
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            min-width: 150px;
+            margin: 0 5px;
+            background: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            padding: 2px 5px;
+        }
+        .signature-input {
+            border: none;
+            border-bottom: 1px solid #000;
+            width: 100%;
+            height: 40px;
+            margin: 20px 0;
+            background: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            text-align: center;
+            padding: 5px;
+        }
+        .table-input {
+            border: none;
+            width: 100%;
+            background: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            padding: 2px;
+        }
+        @media print {
+            body { margin: 20px; }
+            .page-break { page-break-before: always; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">劳务派遣协议</div>
+        <div>合同编号：<input type="text" class="blank-line" placeholder="请填写合同编号"></div>
+    </div>
+
+    <div class="contract-info">
+        <p><strong>甲方（用工单位）：</strong><input type="text" class="blank-line" placeholder="请填写甲方公司名称"></p>
+        <p><strong>统一社会信用代码：</strong><input type="text" class="blank-line" placeholder="请填写统一社会信用代码"></p>
+        <p><strong>法定代表人：</strong><input type="text" class="blank-line" placeholder="请填写法定代表人姓名"></p>
+        <p><strong>联系地址：</strong><input type="text" class="blank-line" placeholder="请填写联系地址"></p>
+        <p><strong>联系电话：</strong><input type="text" class="blank-line" placeholder="请填写联系电话"></p>
+        
+        <br>
+        
+        <p><strong>乙方（劳务派遣单位）：深圳智核创享有限公司</strong></p>
+        <p><strong>统一社会信用代码：</strong><input type="text" class="blank-line" placeholder="请填写乙方统一社会信用代码"></p>
+        <p><strong>法定代表人：</strong><input type="text" class="blank-line" placeholder="请填写乙方法定代表人姓名"></p>
+        <p><strong>联系地址：</strong><input type="text" class="blank-line" placeholder="请填写乙方联系地址"></p>
+        <p><strong>联系电话：</strong><input type="text" class="blank-line" placeholder="请填写乙方联系电话"></p>
+    </div>
+
+    <div class="section">
+        <div class="article">
+            根据《中华人民共和国劳动法》、《中华人民共和国劳动合同法》、《劳务派遣暂行规定》等相关法律法规，甲乙双方在平等自愿、协商一致的基础上，就劳务派遣事宜达成如下协议：
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">第一条 合作内容与方式</div>
+        <div class="article">
+            1.1 乙方根据甲方的用工需求，向甲方派遣具有相应技能和资格的劳动者，为甲方提供科技外包服务。
+        </div>
+        <div class="article">
+            1.2 派遣人员的具体岗位、人数、技能要求等详见附件《派遣人员清单》。
+        </div>
+        <div class="article">
+            1.3 乙方负责与派遣人员签订劳动合同，建立劳动关系；甲方与派遣人员建立用工关系。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">第二条 合作期限</div>
+        <div class="article">
+            2.1 本协议有效期为：<input type="text" class="blank-line" placeholder="年份" style="width:60px;">年<input type="text" class="blank-line" placeholder="月" style="width:40px;">月<input type="text" class="blank-line" placeholder="日" style="width:40px;">日至<input type="text" class="blank-line" placeholder="年份" style="width:60px;">年<input type="text" class="blank-line" placeholder="月" style="width:40px;">月<input type="text" class="blank-line" placeholder="日" style="width:40px;">日。
+        </div>
+        <div class="article">
+            2.2 协议期满前30日，双方可协商续签。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">第三条 甲方权利与义务</div>
+        <div class="article">
+            3.1 甲方有权对派遣人员的工作进行指导、监督和管理。
+        </div>
+        <div class="article">
+            3.2 甲方应当为派遣人员提供必要的工作条件和安全保障措施。
+        </div>
+        <div class="article">
+            3.3 甲方应当按照约定支付劳务派遣费用。
+        </div>
+        <div class="article">
+            3.4 甲方不得将派遣人员再派遣到其他用工单位。
+        </div>
+        <div class="article">
+            3.5 甲方应当配合乙方对派遣人员进行管理，及时反馈派遣人员的工作表现。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">第四条 乙方权利与义务</div>
+        <div class="article">
+            4.1 乙方应当依法与派遣人员签订劳动合同，建立劳动关系。
+        </div>
+        <div class="article">
+            4.2 乙方负责派遣人员的招聘、培训、劳动关系管理等工作。
+        </div>
+        <div class="article">
+            4.3 乙方应当按时足额发放派遣人员的工资、缴纳社会保险费和住房公积金。
+        </div>
+        <div class="article">
+            4.4 乙方应当对派遣人员进行必要的职业培训和安全教育。
+        </div>
+        <div class="article">
+            4.5 乙方有权要求甲方提供派遣人员的工作评价和表现反馈。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">第五条 费用与支付</div>
+        <div class="article">
+            5.1 劳务派遣费用构成：
+            <br>（1）派遣人员工资：<input type="text" class="blank-line" placeholder="请填写金额">元/人/月
+            <br>（2）社会保险费用：按国家规定标准执行
+            <br>（3）住房公积金：按国家规定标准执行
+            <br>（4）管理费用：<input type="text" class="blank-line" placeholder="请填写金额">元/人/月
+            <br>（5）其他费用：<input type="text" class="blank-line" placeholder="请填写其他费用">
+        </div>
+        <div class="article">
+            5.2 甲方应当在每月<input type="text" class="blank-line" placeholder="日期" style="width:40px;">日前将当月劳务派遣费用支付给乙方。
+        </div>
+        <div class="article">
+            5.3 支付方式：<input type="text" class="blank-line" placeholder="请填写支付方式">
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">第六条 人员管理</div>
+        <div class="article">
+            6.1 派遣人员在甲方工作期间，应当遵守甲方的规章制度和工作安排。
+        </div>
+        <div class="article">
+            6.2 派遣人员如有违法违纪行为，甲方有权要求乙方予以处理或更换。
+        </div>
+        <div class="article">
+            6.3 甲方需要增减派遣人员的，应当提前<input type="text" class="blank-line" placeholder="天数" style="width:40px;">日通知乙方。
+        </div>
+        <div class="article">
+            6.4 派遣人员的考勤管理由甲方负责，并应当及时向乙方提供考勤记录。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">第七条 保密条款</div>
+        <div class="article">
+            7.1 双方应当对在合作过程中知悉的对方商业秘密承担保密义务。
+        </div>
+        <div class="article">
+            7.2 乙方应当要求派遣人员对甲方的商业秘密承担保密义务。
+        </div>
+        <div class="article">
+            7.3 保密义务在本协议终止后仍然有效。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">第八条 违约责任</div>
+        <div class="article">
+            8.1 任何一方违反本协议约定的，应当承担相应的违约责任。
+        </div>
+        <div class="article">
+            8.2 甲方逾期支付劳务派遣费用的，应当按日支付万分之<input type="text" class="blank-line" placeholder="数值" style="width:50px;">的违约金。
+        </div>
+        <div class="article">
+            8.3 乙方提供的派遣人员不符合约定要求的，应当及时更换并承担相应损失。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">第九条 争议解决</div>
+        <div class="article">
+            9.1 双方因履行本协议发生争议的，应当首先通过友好协商解决。
+        </div>
+        <div class="article">
+            9.2 协商不成的，可以向<input type="text" class="blank-line" placeholder="请填写法院名称">人民法院提起诉讼。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">第十条 其他约定</div>
+        <div class="article">
+            10.1 本协议一式<input type="text" class="blank-line" placeholder="份数" style="width:40px;">份，甲乙双方各执<input type="text" class="blank-line" placeholder="份数" style="width:40px;">份，具有同等法律效力。
+        </div>
+        <div class="article">
+            10.2 本协议自双方签字盖章之日起生效。
+        </div>
+        <div class="article">
+            10.3 本协议未尽事宜，双方可另行签订补充协议，补充协议与本协议具有同等效力。
+        </div>
+    </div>
+
+    <div class="signature-area">
+        <div class="signature-block">
+            <div><strong>甲方（盖章）：</strong></div>
+            <input type="text" class="signature-input" placeholder="请在此处签字或盖章">
+            <div><strong>法定代表人或授权代表（签字）：</strong></div>
+            <input type="text" class="signature-input" placeholder="请在此处签字或盖章">
+            <div><strong>签署日期：</strong><input type="text" class="blank-line" placeholder="年份" style="width:60px;">年<input type="text" class="blank-line" placeholder="月" style="width:40px;">月<input type="text" class="blank-line" placeholder="日" style="width:40px;">日</div>
+        </div>
+        
+        <div class="signature-block">
+            <div><strong>乙方（盖章）：深圳智核创享有限公司</strong></div>
+            <input type="text" class="signature-input" placeholder="请在此处签字或盖章">
+            <div><strong>法定代表人或授权代表（签字）：</strong></div>
+            <input type="text" class="signature-input" placeholder="请在此处签字或盖章">
+            <div><strong>签署日期：</strong><input type="text" class="blank-line" placeholder="年份" style="width:60px;">年<input type="text" class="blank-line" placeholder="月" style="width:40px;">月<input type="text" class="blank-line" placeholder="日" style="width:40px;">日</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+    
+    <div class="section">
+        <div class="section-title">附件：派遣人员清单</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>身份证号</th>
+                    <th>岗位</th>
+                    <th>技能要求</th>
+                    <th>派遣期限</th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" class="table-input" placeholder="姓名"></td>
+                    <td><input type="text" class="table-input" placeholder="身份证号"></td>
+                    <td><input type="text" class="table-input" placeholder="岗位"></td>
+                    <td><input type="text" class="table-input" placeholder="技能要求"></td>
+                    <td><input type="text" class="table-input" placeholder="派遣期限"></td>
+                    <td><input type="text" class="table-input" placeholder="备注"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="text" class="table-input" placeholder="姓名"></td>
+                    <td><input type="text" class="table-input" placeholder="身份证号"></td>
+                    <td><input type="text" class="table-input" placeholder="岗位"></td>
+                    <td><input type="text" class="table-input" placeholder="技能要求"></td>
+                    <td><input type="text" class="table-input" placeholder="派遣期限"></td>
+                    <td><input type="text" class="table-input" placeholder="备注"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><input type="text" class="table-input" placeholder="姓名"></td>
+                    <td><input type="text" class="table-input" placeholder="身份证号"></td>
+                    <td><input type="text" class="table-input" placeholder="岗位"></td>
+                    <td><input type="text" class="table-input" placeholder="技能要求"></td>
+                    <td><input type="text" class="table-input" placeholder="派遣期限"></td>
+                    <td><input type="text" class="table-input" placeholder="备注"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><input type="text" class="table-input" placeholder="姓名"></td>
+                    <td><input type="text" class="table-input" placeholder="身份证号"></td>
+                    <td><input type="text" class="table-input" placeholder="岗位"></td>
+                    <td><input type="text" class="table-input" placeholder="技能要求"></td>
+                    <td><input type="text" class="table-input" placeholder="派遣期限"></td>
+                    <td><input type="text" class="table-input" placeholder="备注"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><input type="text" class="table-input" placeholder="姓名"></td>
+                    <td><input type="text" class="table-input" placeholder="身份证号"></td>
+                    <td><input type="text" class="table-input" placeholder="岗位"></td>
+                    <td><input type="text" class="table-input" placeholder="技能要求"></td>
+                    <td><input type="text" class="table-input" placeholder="派遣期限"></td>
+                    <td><input type="text" class="table-input" placeholder="备注"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
